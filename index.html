@@ -1,0 +1,400 @@
+<!--
+
+  INSTITUCIÓN: Harvard University
+
+    * Estudiante: Severo Alpizar Iriani Camila
+    * Grupo: 5A PRO VESP  
+    * Actividad: Portal Institucional Harvard (Con barra superior, collage y formulario)
+  ====================================================================== -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvard University - Portal Oficial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR DE CONTACTO -->
+    <div class="top-bar" id="inicio">
+        <div class="top-bar-container">
+            <div class="top-contacts">
+                <span class="top-item">📞 +1 (617) 495-1000</span>
+                <span class="top-item whatsapp">💬 Escríbenos por <strong>WhatsApp</strong></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- BARRA DE NAVEGACIÓN PRINCIPAL -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#inicio">
+                    <img src="img/logo.webp" alt="Harvard" class="brand-logo-img">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#oferta">Oferta Académica</a>
+                <a href="login.html" class="btn-nav-login">Estudiantes</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECCIÓN DE DOS COLUMNAS CON COLLAGE DE IMÁGENES -->
+    <section class="hero-section">
+        <div class="hero-container">
+            
+            <!-- Columna Izquierda: Textos, Botón y Beneficios -->
+            <div class="hero-text-side">
+                <span class="hero-tag">¡ADMISIÓN 2026 ABIERTA!</span>
+                <h1>Educación de Clase Mundial con Validez Internacional</h1>
+                <p>Estudia tu licenciatura en Harvard University, con programas 100% presenciales en Cambridge, Massachusetts, y especialidades con alta proyección global.</p>
+                
+                <div class="hero-cta-box">
+                    <a href="login.html" class="btn-orange">Solicita informes →</a>
+                    <div class="hero-benefits">
+                        <span>✓ Prestigio Ivy League desde 1636</span>
+                        <span>✓ Becas y apoyo financiero hasta 100%</span>
+                        <span>✓ Laboratorios y bibliotecas líderes mundiales</span>
+                    </div>
+                </div>
+            </div>
+
+           <!-- Columna Derecha: Collage de Imágenes -->
+<div class="hero-image-side">
+    <div class="image-collage">
+        <div class="collage-main">
+            <img src="img/campus.jpg" alt="Harvard Campus">
+        </div>
+        <div class="collage-sub">
+            <img src="img/estudiantes.jpg" alt="Estudiantes Harvard">
+            <img src="img/biblioteca.jpg" alt="Biblioteca Widener">
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE OFERTA EDUCATIVA CON IMÁGENES ALUSIVAS -->
+    <section id="oferta" class="careers-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Nuestras 4 Escuelas Principales</h2>
+                <p>Elige tu concentración y prepárate con los líderes mundiales en cada disciplina</p>
+            </div>
+
+            <div class="careers-grid">
+                
+                <!-- Carrera 1: Business -->
+                <div class="career-card">
+                    <div class="career-img-container">
+                        <img src="img/b1.webp" alt="Harvard Business">
+                    </div>
+                    <div class="career-content">
+                        <h3>Business Administration</h3>
+                        <p>Harvard Business School: Liderazgo, gestión global y emprendimiento en la escuela de negocios #1 del mundo.</p>
+                    </div>
+                </div>
+
+                <!-- Carrera 2: Computer Science -->
+                <div class="career-card">
+                    <div class="career-img-container">
+                        <img src="img/b2.jpg" alt="Computer Science">
+                    </div>
+                    <div class="career-content">
+                        <h3>Computer Science</h3>
+                        <p>SEAS: Desarrolla inteligencia artificial, software y sistemas en el centro de innovación de Boston.</p>
+                    </div>
+                </div>
+
+                <!-- Carrera 3: Law -->
+                <div class="career-card">
+                    <div class="career-img-container">
+                        <img src="img/b3.jpg" alt="Harvard Law">
+                    </div>
+                    <div class="career-content">
+                        <h3>Law - Derecho</h3>
+                        <p>Harvard Law School: Forma abogados líderes en derecho constitucional, internacional y corporativo.</p>
+                    </div>
+                </div>
+
+                <!-- Carrera 4: Medicine -->
+                <div class="career-card">
+                    <div class="career-img-container">
+                        <img src="img/b4.webp" alt="Harvard Medicine">
+                    </div>
+                    <div class="career-content">
+                        <h3>Medicine - Medicina</h3>
+                        <p>Harvard Medical School: Investigación biomédica y práctica clínica en hospitales afiliados como Mass General.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE DOCENTES CON RECORRIDO INTERACTIVO (JS) -->
+    <section class="teachers-section">
+        <div class="teachers-container">
+            
+            <div class="teachers-header">
+                <div>
+                    <span class="teachers-tag">¿QUIÉN ENSEÑA EN HARVARD?</span>
+                    <h2>Nuestra Plantilla Docente</h2>
+                    <p>Los profesores de Harvard son ganadores de premios Nobel y Pulitzer, activos en investigación. Utiliza los botones para recorrer el catálogo:</p>
+                </div>
+                <!-- Botones funcionales con IDs -->
+                <div class="teachers-nav-buttons">
+                    <button id="btn-prev" class="nav-btn">‹</button>
+                    <button id="btn-next" class="nav-btn">›</button>
+                </div>
+            </div>
+
+            <!-- Contenedor de las tarjetas de docentes (controlado por JS) -->
+            <div class="teachers-grid" id="teachers-track">
+                
+                <div class="teacher-card">
+                    <img src="img/gaona.jpg" alt="Profesor">
+                    <div class="teacher-info">
+                        <h3>Ing. Eduardo Gaona</h3>
+                        <p>Visiting Scholar en Harvard SEAS - Desarrollo Web y Sistemas Computacionales.</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="img/ana.jpg" alt="Profesora">
+                    <div class="teacher-info">
+                        <h3>Prof. Ana Cipres</h3>
+                        <p>Harvard Business School - Especialista en Estrategia de Tecnologías de la Información.</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/David_J._Malan.png" alt="Prof. David Malan - Harvard">
+    <div class="teacher-info">
+        <h3>Prof. David Malan</h3>
+        <p>Profesor de Computer Science CS50, especialista en Ciberseguridad y Enseñanza de Programación.</p>
+    </div>
+</div>
+
+<div class="teacher-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Howard_Gardner_%282013%29_%28cropped%29.png" alt="Dr. Howard Gardner - Harvard">
+    <div class="teacher-info">
+        <h3>Dr. Howard Gardner</h3>
+        <p>Harvard Graduate School of Education - Psicología del desarrollo y Teoría de Inteligencias Múltiples.</p>
+    </div>
+</div>
+
+<div class="teacher-card">
+    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Prof. Sofía Morales - Harvard">
+    <div class="teacher-info">
+        <h3>Prof. Sofía Morales</h3>
+        <p>Harvard Business School - Especialista en Liderazgo y Comportamiento Organizacional.</p>
+    </div>
+</div>
+
+<div class="teacher-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Steven_Pinker_in_2023.jpg" alt="Prof. Steven Pinker - Harvard">
+    <div class="teacher-info">
+        <h3>Prof. Steven Pinker</h3>
+        <p>Departamento de Psicología - Cognición, Lenguaje y Neurociencia.</p>
+    </div>
+</div>
+
+<div class="teacher-card">
+    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80" alt="Dra. Laura Sánchez - Harvard Medical">
+    <div class="teacher-info">
+        <h3>Dra. Laura Sánchez</h3>
+        <p>Harvard Medical School - Coordinadora de Investigación en Medicina Molecular.</p>
+    </div>
+</div>
+
+                <div class="teacher-card">
+                    <img src="img/sangaona.jpeg" alt="Profesor">
+                    <div class="teacher-info">
+                        <h3>San Gaona</h3>
+                        <p>Patrono de Harvard SEAS, de los que compilan sin errores y despliegan sin miedo.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE DOS COLUMNAS CON FORMULARIO INTEGRADO -->
+    <section class="hero-section">
+        <div class="hero-container">
+            
+            <!-- Columna Izquierda: Textos y Beneficios -->
+            <div class="hero-text-side">
+                <span class="hero-tag">¡ADMISIÓN 2026 ABIERTA!</span>
+                <h1 class="hero-title-custom">¿Tienes dudas?</h1>
+                <p class="hero-desc-custom">
+                    Déjanos tus datos y el equipo de admisiones de Harvard te contactará para ayudarte a elegir tu concentración ideal.
+                </p>
+                
+                <div class="hero-subtitle-custom">
+                    Conoce todo sobre Harvard:
+                </div>
+                <div class="hero-benefits hero-benefits-column">
+                    <span>✓ Programas de pregrado y posgrado</span>
+                    <span>✓ Becas, Financial Aid y costos de matrícula</span>
+                    <span>✓ Proceso de aplicación Common App</span>
+                    <span>✓ Vida en campus y residencias en Cambridge</span>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Tarjeta Flotante con Formulario -->
+            <div class="hero-form-side">
+                <div class="cbtis-hero-form-card">
+                    
+                    <h3 class="form-card-title">
+                        Solicita informes
+                    </h3>
+
+                    <form id="form-hero-informes" action="#" method="POST">
+                        
+                        <div class="cbtis-input-group form-group-margin">
+                            <input type="text" id="info_nombre" name="nombre" required placeholder="Nombre" class="form-control-input">
+                        </div>
+
+                        <div class="cbtis-input-group form-group-margin">
+                            <input type="text" id="info_apellido" name="apellido" required placeholder="Apellido" class="form-control-input">
+                        </div>
+
+                        <div class="cbtis-input-group form-group-margin">
+                            <input type="email" id="info_email" name="email" required placeholder="Correo electrónico" class="form-control-input">
+                        </div>
+
+                        <div class="cbtis-input-group form-group-margin">
+                            <input type="tel" id="info_telefono" name="telefono" required placeholder="Teléfono o WhatsApp" class="form-control-input">
+                        </div>
+
+                        <div class="cbtis-input-group form-group-margin">
+                            <select id="info_nivel" name="nivel" required class="form-control-select">
+                                <option value="">Elige el nivel que deseas estudiar</option>
+                                <option value="pregrado">Pregrado - Harvard College</option>
+                                <option value="posgrado">Posgrado - Graduate School</option>
+                                <option value="extension">Harvard Extension School</option>
+                            </select>
+                        </div>
+
+                        <div class="cbtis-input-group form-group-margin">
+                            <select id="info_carrera" name="carrera" required class="form-control-select">
+                                <option value="">Elige tu área de interés</option>
+                                <option value="business">Business Administration - HBS</option>
+                                <option value="cs">Computer Science - SEAS</option>
+                                <option value="law">Law - Harvard Law School</option>
+                                <option value="medicine">Medicine - HMS</option>
+                            </select>
+                        </div>
+
+                        <div class="cbtis-input-group form-group-margin">
+                            <label for="info_fecha" class="form-date-label">Fecha estimada de ingreso:</label>
+                            <input type="date" id="info_fecha" name="fecha" required class="form-control-date">
+                        </div>
+
+                        <div class="cbtis-input-group form-group-margin">
+                            <textarea id="info_comentarios" name="comentarios" rows="2" placeholder="Escribe tus dudas o comentarios..." class="form-control-textarea"></textarea>
+                        </div>
+
+                        <div class="cbtis-input-group form-group-checkbox">
+                            <input type="checkbox" id="info_terminos" name="terminos" required class="form-checkbox-input">
+                            <label for="info_terminos" class="form-checkbox-label">
+                                Acepto recibir información y el aviso de privacidad de Harvard University.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="cbtis-btn-ingresar form-submit-btn">
+                            Solicitar informes
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE CONVENIOS DOBLE LÍNEA -->
+    <section class="convenios-section">
+        <div class="convenios-container">
+            
+            <div class="section-header">
+                <span class="teachers-tag convenience-tag-custom">¿QUIÉNES CONFÍAN EN HARVARD?</span>
+                <h2>Nuestros Convenios Globales</h2>
+                <p>Grandes empresas, laboratorios y universidades contratan a egresados de Harvard y financian investigación conjunta.</p>
+            </div>
+
+            <!-- LÍNEA 1: Se desplaza hacia la IZQUIERDA -->
+            <div class="marquee-wrapper">
+                <div class="marquee-track marquee-track-top">
+                    <div class="convenio-card">💻 Google</div>
+                    <div class="convenio-card">🍎 Apple</div>
+                    <div class="convenio-card">🏦 Goldman Sachs</div>
+                    <div class="convenio-card">🚀 NASA</div>
+                    <div class="convenio-card">💊 Pfizer</div>
+                    <div class="convenio-card">📦 Microsoft Research</div>
+                    <div class="convenio-card">⚡ Tesla</div>
+                    <div class="convenio-card">🎓 MIT Partnership</div>
+                    <div class="convenio-card">💻 Google</div>
+                    <div class="convenio-card">🍎 Apple</div>
+                    <div class="convenio-card">🏦 Goldman Sachs</div>
+                    <div class="convenio-card">🚀 NASA</div>
+                    <div class="convenio-card">💊 Pfizer</div>
+                    <div class="convenio-card">📦 Microsoft Research</div>
+                    <div class="convenio-card">⚡ Tesla</div>
+                    <div class="convenio-card">🎓 MIT Partnership</div>
+                </div>
+            </div>
+
+            <!-- LÍNEA 2: Se desplaza hacia la DERECHA -->
+            <div class="marquee-wrapper marquee-wrapper-spacing">
+                <div class="marquee-track marquee-track-bottom">
+                    <div class="convenio-card">🏛️ The White House</div>
+                    <div class="convenio-card">🏥 Mass General Hospital</div>
+                    <div class="convenio-card">📈 World Bank</div>
+                    <div class="convenio-card">🌐 United Nations</div>
+                    <div class="convenio-card">💻 Meta AI Research</div>
+                    <div class="convenio-card">🎓 Oxford Exchange</div>
+                    <div class="convenio-card">🏥 Mayo Clinic</div>
+                    <div class="convenio-card">⚙️ Boston Dynamics</div>
+                    <div class="convenio-card">🏛️ The White House</div>
+                    <div class="convenio-card">🏥 Mass General Hospital</div>
+                    <div class="convenio-card">📈 World Bank</div>
+                    <div class="convenio-card">🌐 United Nations</div>
+                    <div class="convenio-card">💻 Meta AI Research</div>
+                    <div class="convenio-card">🎓 Oxford Exchange</div>
+                    <div class="convenio-card">🏥 Mayo Clinic</div>
+                    <div class="convenio-card">⚙️ Boston Dynamics</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="footer-container">
+            
+            <div class="footer-info">
+                <p>Harvard University &copy; 2026 - Cambridge, MA</p>
+                <p class="footer-author">Desarrollado por: Gaona Castro Eduardo Baltazar (3B PRO VESP) - Adaptación Harvard</p>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://facebook.com/Harvard" target="_blank" class="social-icon" title="Facebook">f</a>
+                <a href="https://instagram.com/harvard" target="_blank" class="social-icon" title="Instagram">ig</a>
+                <a href="https://whatsapp.com" target="_blank" class="social-icon" title="WhatsApp">💬</a>
+                <a href="https://youtube.com/harvard" target="_blank" class="social-icon" title="YouTube"> ▶</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
